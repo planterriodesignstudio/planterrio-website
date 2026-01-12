@@ -29,7 +29,7 @@ const ProjectsPage = () => {
         elements.forEach(el => observer.observe(el));
 
         return () => elements.forEach(el => observer.unobserve(el));
-    }, []);
+    }, [displayedImages]);
 
     useEffect(() => {
         console.log('--- Filtering Projects ---');
@@ -51,6 +51,12 @@ const ProjectsPage = () => {
 
         console.log('Final displayedImages count:', images.length);
         setDisplayedImages(images);
+
+        // Force visibility check after state update
+        setTimeout(() => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(el => el.classList.add('is-visible'));
+        }, 100);
     }, [selectedCategory]);
 
     const getDisplayName = (key) => {

@@ -117,10 +117,10 @@ img {
 }
 
 .container {
-  width: 90%;
+  width: 92%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .section-title {

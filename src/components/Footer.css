@@ -121,7 +121,7 @@
 @media (max-width: 768px) {
     .footer-top {
         gap: 30px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         /* 2x2 on tablets */
     }
 }
@@ -135,6 +135,7 @@
     .footer-col {
         border-bottom: 1px solid #333;
         padding-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     .footer-col:last-child {

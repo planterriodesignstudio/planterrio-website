@@ -12,6 +12,8 @@ const About = () => {
                     <p className="about-text">
                         <strong>At Planterrio, we believe every space has a soul waiting to bloom.</strong> <br /><br />
                         We aren't just landscapers; we are expert garden designers in Bangalore who paint with nature. Whether it's a cozy balcony in a high-rise or a sprawling villa lawn, our professional landscapers in Bangalore turn ordinary patches of concrete into breathing sanctuaries. Planterrio is your trusted partner for residential and commercial landscaping in Bangalore.
+                    </p>
+                    <div className="about-list-wrapper">
                         <p><b>Why Choose our Landscaping Services?</b></p>
                         <ul className="about-text-list">
                             {[
@@ -22,13 +24,13 @@ const About = () => {
                                 'Innovative Vertical Garden Designers',
                                 'Customer Satisfaction Guaranteed'
                             ].map((item, index) => (
-                                <li key={index} style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                    {item}
+                                <li key={index} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '10px' }}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '5px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    <span>{item}</span>
                                 </li>
                             ))}
                         </ul>
-                    </p>
+                    </div>
                 </div>
                 <div className="about-image">
                     <img src={aboutImg} alt="About Planterrio" />

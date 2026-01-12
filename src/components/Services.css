@@ -7,8 +7,8 @@
 .services-grid {
     display: grid;
     /* Updated for better responsiveness and card width */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
     padding: 20px 0;
 }
 
@@ -17,7 +17,8 @@
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    height: 500px;
+    min-height: 480px;
+    height: auto;
     /* Fixed height for uniformity */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -77,6 +78,7 @@
     /* Clamp text to 3 lines */
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

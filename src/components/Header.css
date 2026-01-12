@@ -240,7 +240,9 @@
 
     .contact-info {
         font-size: 0.75rem;
-        gap: 10px;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .mobile-toggle {
@@ -248,8 +250,8 @@
     }
 
     .logo-icon {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     .header.scrolled .logo-icon {

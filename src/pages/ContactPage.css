@@ -297,13 +297,15 @@
 
     .contact-left-col {
         min-height: auto;
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
 
     .info-block {
         margin-bottom: 1.5rem;
     }
+
 }
+
 
 @media (max-width: 600px) {
     .form-row {
@@ -312,6 +314,6 @@
     }
 
     .contact-right-col {
-        padding: 1.5rem;
+        padding: 1.5rem 1rem;
     }
 }
