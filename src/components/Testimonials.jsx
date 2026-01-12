@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Title from './Title';
+import Title from './Title.jsx';
 import './Testimonials.css';
 
 const testimonials = [

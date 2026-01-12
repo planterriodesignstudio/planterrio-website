@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Title from './Title';
+import Title from './Title.jsx';
 import './Services.css';
 
 import landscapingImg from '../assets/images/home/hero1.webp'; // Using Landscaping image

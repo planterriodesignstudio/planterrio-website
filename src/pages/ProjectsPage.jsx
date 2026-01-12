@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { serviceData } from '../data/services';
-import { allCategoryImages } from '../data/allImages';
-import CTASection from '../components/CTASection';
-import WhyChooseUs from '../components/WhyChooseUs';
+import { serviceData } from '../data/services.js';
+import { allCategoryImages } from '../data/allImages.js';
+import CTASection from '../components/CTASection.jsx';
+import WhyChooseUs from '../components/WhyChooseUs.jsx';
 import './ProjectsPage.css';
-import Testimonials from '../components/Testimonials';
-import SEO from '../components/SEO';
+import Testimonials from '../components/Testimonials.jsx';
+import SEO from '../components/SEO.jsx';
 
 const ProjectsPage = () => {
     // "All" + all keys from data

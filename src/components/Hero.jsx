@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Button from './Button';
+import Button from './Button.jsx';
 import emailjs from '@emailjs/browser';
 import './Hero.css';
 

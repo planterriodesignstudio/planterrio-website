@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Services from '../components/Services';
-import Trending from '../components/Trending';
-import Gallery from '../components/Gallery';
-import Process from '../components/Process';
-import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
-import Articles from '../components/Articles';
-import ServiceBenefits from '../components/ServiceBenefits';
-import WhyChooseUS from '../components/WhyChooseUS';
-import CTASection from '../components/CTASection';
-import SEO from '../components/SEO';
+import Hero from '../components/Hero.jsx';
+import About from '../components/About.jsx';
+import Services from '../components/Services.jsx';
+import Trending from '../components/Trending.jsx';
+import Gallery from '../components/Gallery.jsx';
+import Process from '../components/Process.jsx';
+import Testimonials from '../components/Testimonials.jsx';
+import FAQ from '../components/FAQ.jsx';
+import Articles from '../components/Articles.jsx';
+import ServiceBenefits from '../components/ServiceBenefits.jsx';
+import WhyChooseUS from '../components/WhyChooseUs.jsx';
+import CTASection from '../components/CTASection.jsx';
+import SEO from '../components/SEO.jsx';
 
 const Home = () => {
     useEffect(() => {

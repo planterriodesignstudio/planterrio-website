@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from './Title';
+import Title from './Title.jsx';
 import './About.css';
 import aboutImg from '../assets/images/home/about.webp';
 

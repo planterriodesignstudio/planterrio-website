@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { serviceData } from '../data/services';
+import { serviceData } from '../data/services.js';
 import './ServicePage.css';
 
 // Reusing existing components where possible or creating local ones
-import Process from './Process';
-import Testimonials from './Testimonials';
-import FAQ from './FAQ';
+import Process from './Process.jsx';
+import Testimonials from './Testimonials.jsx';
+import FAQ from './FAQ.jsx';
 
 const ServicePage = () => {
     const { slug } = useParams();

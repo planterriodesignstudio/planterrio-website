@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import Button from '../components/Button';
-import Title from '../components/Title';
+import Button from '../components/Button.jsx';
+import Title from '../components/Title.jsx';
 import { useParams, Navigate } from 'react-router-dom';
-import { serviceData } from '../data/services';
+import { serviceData } from '../data/services.js';
 import './ServicePage.css';
-import CTASection from '../components/CTASection';
-import ServiceBenefits from '../components/ServiceBenefits';
-import WhyChooseUs from '../components/WhyChooseUs';
-import SEO from '../components/SEO';
+import CTASection from '../components/CTASection.jsx';
+import ServiceBenefits from '../components/ServiceBenefits.jsx';
+import WhyChooseUs from '../components/WhyChooseUs.jsx';
+import SEO from '../components/SEO.jsx';
 
 const ServicePage = () => {
     const { slug } = useParams();

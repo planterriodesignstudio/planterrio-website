@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Title from './Title';
+import Title from './Title.jsx';
 import './FAQ.css';
 
 const faqData = [

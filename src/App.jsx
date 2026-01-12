@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import ContactPage from './pages/ContactPage';
-import ServicePage from './pages/ServicePage';
-import ProjectsPage from './pages/ProjectsPage';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
+import ContactPage from './pages/ContactPage.jsx';
+import ServicePage from './pages/ServicePage.jsx';
+import ProjectsPage from './pages/ProjectsPage.jsx';
 import './App.css';
 
 import { HelmetProvider } from 'react-helmet-async';

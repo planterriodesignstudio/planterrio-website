@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactPage.css';
-import SEO from '../components/SEO';
+import SEO from '../components/SEO.jsx';
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({

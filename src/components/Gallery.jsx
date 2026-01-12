@@ -1,6 +1,6 @@
 import React from 'react';
-import Title from './Title';
-import Button from './Button';
+import Title from './Title.jsx';
+import Button from './Button.jsx';
 import { Link } from 'react-router-dom';
 import './Gallery.css';
 
