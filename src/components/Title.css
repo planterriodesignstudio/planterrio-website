@@ -1,0 +1,78 @@
+.aesthetic-title-wrapper {
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.aesthetic-title-wrapper.center {
+    text-align: center;
+}
+
+.aesthetic-title-wrapper.left {
+    text-align: left;
+}
+
+.aesthetic-title-wrapper.right {
+    text-align: right;
+}
+
+.aesthetic-main-title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--dark-green, #2E7D32);
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    background: linear-gradient(120deg, var(--dark-green, #2E7D32), var(--primary-green, #4CAF50));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.title-underline {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-gold, #FBC02D);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.aesthetic-title-wrapper.center .title-underline {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.aesthetic-title-wrapper:hover .title-underline {
+    width: 100%;
+}
+
+.aesthetic-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light, #666);
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .aesthetic-main-title {
+        font-size: 2rem;
+    }
+}
+
+.aesthetic-title-wrapper.light .aesthetic-main-title {
+    color: #fff;
+    background: linear-gradient(120deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.aesthetic-title-wrapper.light .aesthetic-subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}

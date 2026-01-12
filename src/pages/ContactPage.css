@@ -1,0 +1,317 @@
+/* Contact Page Styles */
+
+.contact-page {
+    padding-top: 160px;
+    /* Space for fixed header */
+    padding-bottom: 3rem;
+    min-height: 100vh;
+}
+
+/* Page Title Section */
+.contact-page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 15px;
+}
+
+.contact-page-title h1 {
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-page-title .subtitle-divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-green);
+    margin: 10px auto 20px;
+}
+
+.contact-page-title p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Layout Grid */
+.contact-split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    /* Ensure equal height for children */
+    align-items: stretch;
+}
+
+/* Left Side: Wrapper with Overlay */
+.contact-left-col {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-height: 500px;
+    /* Ensure it's not too small */
+}
+
+/* Dark Overlay */
+.contact-left-col::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Darker side as requested */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(20, 50, 20, 0.75) 100%);
+    z-index: 1;
+}
+
+.left-col-content {
+    position: relative;
+    z-index: 2;
+    /* Sit on top of overlay */
+}
+
+/* Info Blocks in Overlay */
+.info-block {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.info-block-icon {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    background: rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.info-block-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: 600;
+}
+
+.info-block-content p,
+.info-block-content a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.info-block-content a:hover {
+    color: var(--primary-green);
+}
+
+/* Social Media inside overlay */
+.social-media-block {
+    margin-top: 3rem;
+}
+
+.social-media-block h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.social-icons-row {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background-color: var(--primary-green);
+    transform: translateY(-3px);
+    border-color: var(--primary-green);
+}
+
+/* Right Side: Form */
+.contact-right-col {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    /* Match left col min-height */
+}
+
+.contact-right-col h2 {
+    color: var(--dark-green);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.form-full-height {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-half {
+    flex: 1;
+}
+
+.form-group-full {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-half label,
+.form-group-full label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fafafa;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 150px;
+    flex-grow: 1;
+    /* Allow to grow if container is tall */
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: auto;
+    /* Push to bottom if flex spacing needed */
+}
+
+.submit-btn:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.2);
+}
+
+/* Map Section */
+.map-section-padded {
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin: 0 15px 3rem 15px;
+    /* Margin from sides and bottom */
+}
+
+.map-container-frame {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    filter: invert(90%) hue-rotate(180deg) opacity(0.8);
+    /* Cool map effect? or just grayscale */
+    filter: grayscale(0.2);
+    transition: filter 0.3s;
+}
+
+.map-container-frame:hover {
+    filter: grayscale(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-split-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-left-col {
+        min-height: auto;
+        padding: 2rem;
+    }
+
+    .info-block {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-right-col {
+        padding: 1.5rem;
+    }
+}

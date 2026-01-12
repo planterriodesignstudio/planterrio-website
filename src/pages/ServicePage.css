@@ -1,0 +1,184 @@
+/* ServicePage.css */
+
+.service-page {
+    padding-top: 100px;
+    padding-bottom: 2rem;
+}
+
+/* 1. Header Section: Title & Intro */
+.service-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    padding: 0 20px;
+}
+
+.service-title {
+    font-size: 3rem;
+    color: var(--dark-green);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.service-intro {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* 2. Top Images Section (3 side by side with context) */
+.service-top-images {
+    margin-bottom: 5rem;
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.image-card {
+    text-align: center;
+}
+
+.image-frame {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-frame:hover img {
+    transform: scale(1.05);
+}
+
+.image-context {
+    font-size: 1.1rem;
+    color: var(--dark-green);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 3. Benefits Section */
+.service-benefits-section {
+    padding: 50px 0;
+    background-color: var(--light-bg);
+    margin-bottom: 5rem;
+    text-align: center;
+    overflow: hidden;
+    /* For Marquee */
+}
+
+.benefits-title {
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+}
+
+.benefits-intro {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Marquee Styles */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+.benefit-pill {
+    display: inline-block;
+    background-color: white;
+    color: var(--dark-green);
+    padding: 15px 30px;
+    margin: 0 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 4. Projects Section */
+.service-projects {
+    margin-bottom: 5rem;
+}
+
+.projects-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-item {
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .images-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .image-frame {
+        height: 300px;
+    }
+
+    .service-title {
+        font-size: 2.2rem;
+    }
+}

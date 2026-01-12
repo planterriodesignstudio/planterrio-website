@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  /* Premium Nature Palette */
+  --primary-green: #3A7D44;
+  /* Natural, balanced green */
+  --dark-green: #143628;
+  /* Deep Forest Green - replacing the standard dark green */
+  --light-green: #8FBC8F;
+  /* Sage/Muted green for softness */
+
+  --accent-gold: #D4A373;
+  /* Earthy Beige/Gold - less yellow, more natural */
+  --accent-spotlight: #E9F1EA;
+  /* Very light green for spotlight sections */
+
+  --text-color: #2C3333;
+  /* Deep charcoal, softer than black */
+  --text-light: #526D63;
+  /* Muted slate-green for secondary text */
+
+  --bg-color: #FCFCFB;
+  /* Off-white, warmer than pure white */
+  --light-bg: #F0F4F1;
+  /* Soft mist color for section differentiation */
+
+  --white: #FFFFFF;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.7;
+  /* Increased for better readability */
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Animations - Keeping existing */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 {
+  transition-delay: 0.1s;
+}
+
+.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  font-weight: 600;
+  /* Reduced from 700 for a cleaner look */
+  color: var(--dark-green);
+  letter-spacing: -0.02em;
+  /* Slight tightening for modern feel */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  /* Slightly smaller for elegance */
+  margin-bottom: 3rem;
+  color: var(--dark-green);
+  text-transform: capitalize;
+  /* Changed from uppercase to capitalize for less aggression */
+  letter-spacing: 0;
+}

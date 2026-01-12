@@ -1,0 +1,128 @@
+/* Services Grid */
+.services-section {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.services-grid {
+    display: grid;
+    /* Updated for better responsiveness and card width */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* Service Card Container */
+.service-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 500px;
+    /* Fixed height for uniformity */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Image */
+.service-image-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s ease;
+    filter: brightness(0.9);
+}
+
+.service-card:hover .service-image-bg {
+    transform: scale(1.1);
+}
+
+/* Content Overlay Card */
+.service-content-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+/* Title */
+.service-content-overlay h3 {
+    font-size: 1.6rem;
+    color: var(--dark-green);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+/* Description */
+.service-content-overlay p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    /* Hidden initially or clamped? Let's just keep it clean. */
+    /* Clamp text to 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Action Button/Arrow */
+.service-action-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.service-arrow-btn {
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-green);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+}
+
+.service-card:hover .service-arrow-btn {
+    background-color: var(--primary-green);
+    transform: translateX(5px);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .service-card {
+        height: 450px;
+    }
+
+    .service-content-overlay {
+        padding: 20px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .service-content-overlay h3 {
+        font-size: 1.4rem;
+    }
+}
